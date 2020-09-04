@@ -1,6 +1,7 @@
 FROM amazonlinux:2
 LABEL maintenaner=sawanoboriyu@higanworks.com
-RUN yum install -y hostname
+RUN yum install -y hostname tar gzip
+
 COPY amimoto-nginx-mainline_amzn2.repo /etc/yum.repos.d/amimoto-nginx-mainline_amzn2.repo
 RUN yum clean all && \
    yum install -y nginx \
