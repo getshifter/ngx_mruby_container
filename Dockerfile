@@ -1,7 +1,6 @@
 FROM amazonlinux:2
 LABEL maintenaner=sawanoboriyu@higanworks.com
-RUN curl -s https://packagecloud.io/install/repositories/amimoto-nginx-mainline/amzn2/script.rpm.sh | bash
-
+RUN yum install -y hostname
 COPY amimoto-nginx-mainline_amzn2.repo /etc/yum.repos.d/amimoto-nginx-mainline_amzn2.repo
 RUN yum clean all && \
    yum install -y nginx \
