@@ -8,5 +8,6 @@ RUN yum clean all && \
   nginx-mod-ngx_pagespeed \
   nginx-mod-ngx_mruby \
   nginx-mod-http_cache_purge23 \
+  && rm -f /etc/yum.repos.d/amimoto-nginx-mainline_amzn2.repo \
   && rm -rf /var/cache/yum
 ENTRYPOINT [ "/bin/bash" ]
